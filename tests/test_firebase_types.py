@@ -7,6 +7,7 @@ from huckleberry_api.firebase_types import (
     FirebaseActivityPrefs,
     FirebaseActivityTimerData,
     FirebaseActivityTimerEntryData,
+    FirebaseChildDocument,
     FirebaseDiaperDocumentData,
     FirebaseFeedDocumentData,
     FirebaseGrowthData,
@@ -135,6 +136,26 @@ def test_medication_model_accepts_live_app_ounce_units() -> None:
     )
 
     assert model.units == "oz"
+
+
+def test_child_sweetspot_times_accepts_null_slots() -> None:
+    """Child docs can include null placeholders in sweetSpotTimes map."""
+    model = FirebaseChildDocument.model_validate(
+        {
+            "sweetspot": {
+                "selectedNapDay": 1,
+                "sweetSpotTimes": {
+                    "0": 90,
+                    "1": 120,
+                    "2": None,
+                },
+            }
+        }
+    )
+
+    assert model.sweetspot is not None
+    assert model.sweetspot.sweetSpotTimes is not None
+    assert model.sweetspot.sweetSpotTimes["2"] is None
 
 
 def test_pump_interval_model() -> None:

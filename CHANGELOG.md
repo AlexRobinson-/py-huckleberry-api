@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- towncrier release notes start -->
 
+## [0.4.3] - 2026-05-18
+
+### Bugfixes
+
+- Allow `childs/{child_id}.sweetspot.sweetSpotTimes` to contain sparse null slots so live Firebase child documents validate without raising type errors.
+
+
 ## [0.4.2] - 2026-04-27
 
 ### Features

@@ -161,7 +161,8 @@ class FirebaseChildSweetspot(StrictModel):
     """Known payload for childs/{child_id}.sweetspot."""
 
     selectedNapDay: Number | None = None
-    sweetSpotTimes: dict[str, Number] | None = None
+    # Live child docs can include sparse SweetSpot slots with null values.
+    sweetSpotTimes: dict[str, Number | None] | None = None
     sweetspotStrings: FirebaseChildSweetspotStrings | None = None
     uuid: str | None = None
 
