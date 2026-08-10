@@ -1,6 +1,6 @@
 # Huckleberry API
 
-[![Integration Tests](https://github.com/Woyken/py-huckleberry-api/actions/workflows/integration-tests.yml/badge.svg)](https://github.com/Woyken/py-huckleberry-api/actions/workflows/integration-tests.yml)
+[![Integration Tests](https://github.com/AlexRobinson-/py-huckleberry-api/actions/workflows/integration-tests.yml/badge.svg)](https://github.com/AlexRobinson-/py-huckleberry-api/actions/workflows/integration-tests.yml)
 
 Python API client for the Huckleberry baby tracking app using Firebase Firestore.
 
@@ -275,4 +275,4 @@ This is an unofficial, reverse-engineered API client. It is not affiliated with,
 
 ## Related Projects
 
-- [Huckleberry Home Assistant Integration](https://github.com/Woyken/huckleberry-homeassistant) - Home automation integration using this library
+- [Huckleberry Home Assistant Integration](https://github.com/AlexRobinson-/huckleberry-homeassistant) - Home automation integration using this library
